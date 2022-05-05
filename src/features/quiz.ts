@@ -8,7 +8,7 @@ export type QuizState = {
 const initialState: QuizState = {
     quizList: [
         {
-            id: 0,
+            id: "0",
             text: "テストデータです。",
             ans: true
         }

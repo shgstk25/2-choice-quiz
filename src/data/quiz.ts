@@ -1,5 +1,5 @@
 export type Quiz = {
-    id: number,
+    id: string,
     text: string,
     ans: boolean
 };

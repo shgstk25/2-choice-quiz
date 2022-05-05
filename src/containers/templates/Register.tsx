@@ -15,7 +15,7 @@ const EnhancedRegister: VFC = () => {
             return;
         }
         dispatch(added({
-            id: new Date().getTime(),
+            id: new Date().getTime().toString(),
             text: text,
             ans: !!ans
         }))
