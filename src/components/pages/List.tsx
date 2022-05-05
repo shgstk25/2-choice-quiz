@@ -13,7 +13,7 @@ const List: VFC<Props> = ({
 }) => (
     <>
         <h1>問題管理ページ</h1>
-        <Link to="/">追加</Link>
+        <Link to="/register">追加</Link>
         {quizList.map((quiz: Quiz) => (
             <div key={quiz.id} style={{display: "flex"}}>
                 <p>{quiz.text}</p>
