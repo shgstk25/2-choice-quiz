@@ -9,7 +9,7 @@ const EnhancedRegister: VFC = () => {
     const navigate = useNavigate();
     const { added } = quizSlice.actions;
 
-    const register = (text: string|undefined, ans: string|undefined) => {
+    const register = (text: string|undefined, ans: boolean|undefined) => {
         if (text === undefined || text === "") {
             alert("問題文を入力してください")
             return;
@@ -24,7 +24,7 @@ const EnhancedRegister: VFC = () => {
 
     return (
         <Register
-            register={(text: string|undefined, ans: string|undefined) => register(text, ans)}
+            register={(text: string|undefined, ans: boolean|undefined) => register(text, ans)}
         />
     )
 }

@@ -2,7 +2,7 @@ import { VFC, useRef } from "react";
 import { Link } from "react-router-dom";
 
 interface Props {
-    register: (text: string|undefined, ans: string|undefined) => void
+    register: (text: string|undefined, ans: boolean|undefined) => void
 }
 
 const Register: VFC<Props> = ({
@@ -19,7 +19,7 @@ const Register: VFC<Props> = ({
             <p>正答（○ならチェックを付けて、×ならチェックを外して登録してください）</p>
             <input type="checkbox" value={1} ref={ansRef} />
             <br />
-            <input type="button" value="追加" onClick={() => register(textRef.current?.value, ansRef.current?.value)} />
+            <input type="button" value="追加" onClick={() => register(textRef.current?.value, ansRef.current?.checked)} />
             <br />
             <Link to="/list">問題管理ページへ戻る</Link>
             <br />
