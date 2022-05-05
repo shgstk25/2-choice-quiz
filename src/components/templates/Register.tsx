@@ -5,7 +5,7 @@ interface Props {
     register: (text: string|undefined, ans: string|undefined) => void
 }
 
-const List: VFC<Props> = ({
+const Register: VFC<Props> = ({
     register = () => undefined,
 }) => {
     const textRef = useRef<HTMLInputElement>(null);
@@ -28,4 +28,4 @@ const List: VFC<Props> = ({
     )
 }
 
-export default List;
+export default Register;
