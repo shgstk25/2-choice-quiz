@@ -17,7 +17,7 @@ const List: VFC<Props> = ({
         {quizList.map((quiz: Quiz) => (
             <div key={quiz.id} style={{display: "flex"}}>
                 <p>{quiz.text}</p>
-                <Link to="/">編集</Link>
+                <Link to={`/change/${quiz.id}`}>編集</Link>
                 <input type="button" value="削除" onClick={() => remove(quiz)} />
             </div>
         ))}
