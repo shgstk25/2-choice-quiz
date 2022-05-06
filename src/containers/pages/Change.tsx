@@ -1,7 +1,7 @@
 import { VFC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate, useParams } from "react-router";
-import Change from "../../components/templates/Change"
+import Change from "../../components/pages/Change"
 import { Quiz } from "../../data/quiz";
 import { quizSlice, QuizState } from "../../features/quiz"
 

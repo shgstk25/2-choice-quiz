@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router";
 
 import Top from './components/pages/Top';
 import List from './containers/pages/List';
-import Register from './containers/templates/Register';
-import Change from './containers/templates/Change';
+import Register from './containers/pages/Register';
+import Change from './containers/pages/Change';
 import NotFound from './components/pages/404';
 
 const App: VFC = () => (

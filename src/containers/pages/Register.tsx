@@ -1,7 +1,7 @@
 import { VFC } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import Register from "../../components/templates/Register"
+import Register from "../../components/pages/Register"
 import { quizSlice } from "../../features/quiz"
 
 const EnhancedRegister: VFC = () => {
