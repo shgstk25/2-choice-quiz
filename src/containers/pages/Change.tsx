@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate, useParams } from "react-router";
 import Change from "../../components/pages/Change"
 import { Quiz } from "../../data/quiz";
-import { quizSlice, QuizState } from "../../features/quiz"
+import { quizSlice } from "../../features/quiz"
+import { RootState } from "../../store";
 
 const EnhancedChange: VFC = () => {
     const { id = "" } = useParams();
-    const quiz = useSelector<QuizState, Quiz[]>((state) => state.quizList).find((v) => v.id === id)
+    const quiz = useSelector<RootState, Quiz[]>((state) => state.quiz.quizList).find((v) => v.id === id)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { edited, removed } = quizSlice.actions;

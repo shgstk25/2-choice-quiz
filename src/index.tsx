@@ -4,14 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import { quizSlice } from './features/quiz'
+import { store } from './store'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-const store = configureStore({ reducer: quizSlice.reducer})
 root.render(
   <React.StrictMode>
     <BrowserRouter>
