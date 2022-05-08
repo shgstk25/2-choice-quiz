@@ -1,37 +1,30 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Quiz } from "../data/quiz";
+import { Answer, Question } from "../data/question";
 
 type AnswerState = {
-    ansList: Quiz[]
+    answerList: Answer[]
 };
 
 const initialState: AnswerState = {
-    ansList: [
-        {
-            id: "0",
-            text: "テストデータです。",
-            ans: true
-        }
-    ]
+    answerList: []
 };
 
-export const ansSlice = createSlice({
-    name: "ans",
+export const answerSlice = createSlice({
+    name: "answer",
     initialState,
     reducers: {
-        seted: (state, action: PayloadAction<Quiz[]>) => ({
+        seted: (state, action: PayloadAction<Question[]>) => ({
             ...state,
-            ansList: action.payload.map((v) => ({ ...v, ans: false }))
+            answerList: action.payload.map((v) => ({ ...v, selected: null }))
         }),
-        selected: (state, action: PayloadAction<Quiz>) => ({
+        selected: (state, action: PayloadAction<Answer>) => ({
             ...state,
-            ansList: state.ansList.map((v) => {
-                console.log(v)
+            answerList: state.answerList.map((v) => {
                 if (v.id === action.payload.id) {
                     return action.payload
                 }
-                return v
+                return v;
             })
         })
     }
-})
+});
