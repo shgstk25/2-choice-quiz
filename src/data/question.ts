@@ -1,13 +1,6 @@
-type QuestionBase = {
+export type Question = {
     id: string,
     text: string,
-    choices: string[]
-};
-
-export type Question = QuestionBase & {
+    choices: string[],
     correct: number
-};
-
-export type Answer = QuestionBase & {
-    selected: number | null
 };
